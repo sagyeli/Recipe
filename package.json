@@ -1,0 +1,26 @@
+{
+  "name": "recipe-to-json",
+  "version": "1.0.0",
+  "description": "A wrapper for recipes notated as JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "var recipe = new Recipe({\"Wait\":[{\"Pour onto\":[{\"Crack\":[\"egg\"]},{\"Spread\":[{\"Heat\":[\"pan\",\"45C\"]},\"butter\"]}]},\"5min\"]})"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagyeli/Recipe.git"
+  },
+  "keywords": [
+    "recipe"
+  ],
+  "author": "Eli Sagy <sagyeli@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagyeli/Recipe/issues"
+  },
+  "homepage": "https://github.com/sagyeli/Recipe#readme",
+  "dependencies": {
+    "deep-diff": "^0.3.8",
+    "lodash": "^4.17.4"
+  }
+}
