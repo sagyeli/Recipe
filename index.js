@@ -42,8 +42,19 @@ exports.Recipe = function(json) {
         return Object.assign({}, recipe);
     }
 
-    this.toString = function() {
-        // TODO
+    this.toString = function(r, level) {
+        var self = this;
+        r = r || recipe;
+        level = level || 1;
+        if (_.isString(r)) {
+            return r;
+        } else {
+            var instructions = [];
+            for (var instruction in r) {
+                instructions.push([instruction, _.map(r[instruction], function(item) { return '\n' + Array(level + 1).join('\t') + self.toString(item, level + 1); }).join('\n' + Array(level + 1).join('\t') + 'and')].join(' with '));
+            }
+            return instructions.join('\n' + Array(level + 1).join('\t') + 'or');
+        }
     }
 
     this.getDistance = function(targetRecipe) {
