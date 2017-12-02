@@ -1,7 +1,7 @@
 ## Installation
 
 ```
-npm install -g recipe-to-json
+npm install -save recipe-to-json
 ```
 
 ## Usage
